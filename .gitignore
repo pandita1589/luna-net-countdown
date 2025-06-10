@@ -1,0 +1,33 @@
+# Dependencias
+node_modules/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Archivos de respaldo
+*.bak
+*.backup
+
+# Archivos del editor
+.vscode/
+.idea/
+
+# Archivos de entorno
+.env
+.env.local
+
+# Archivos de servidor (estos van en el backend)
+server.js
+package.json
+package-lock.json
+
+# Solo queremos el HTML para el frontend
