@@ -26,6 +26,7 @@ npm-debug.log*
 .env.local
 
 # Archivos de servidor (estos van en el backend)
+monn-studios-backend
 server.js
 package.json
 package-lock.json
