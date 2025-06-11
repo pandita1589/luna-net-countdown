@@ -1252,11 +1252,17 @@
                 animateNumberChange('minutes', String(minutes).padStart(2, '0'));
                 animateNumberChange('seconds', String(seconds).padStart(2, '0'));
             } else {
+                // ¡TIEMPO TERMINADO!
                 ['days', 'hours', 'minutes', 'seconds'].forEach(id => {
                     const element = document.getElementById(id);
                     if (element) element.textContent = '00';
                 });
-            }
+
+                // Mostrar mensaje de confetis (solo una vez)
+                if (!window.celebrationShown) {
+                    showCelebration();
+                    window.celebrationShown = true;
+                }
         }
 
         function animateNumberChange(elementId, newValue) {
@@ -1528,6 +1534,53 @@
         window.updateCountdown = updateCountdown;
 
         console.log('🌍 Sistema completamente funcional!');
+
+            function showCelebration() {
+    // Cambiar título
+    document.querySelector('.main-title').textContent = '¡LUNA NET YA DISPONIBLE!';
+    document.querySelector('.subtitle').textContent = '🎉 ¡Se terminó el tiempo de espera! 🎉';
+    
+    // Crear confetis
+    for (let i = 0; i < 100; i++) {
+        createConfetti();
+    }
+    
+    // Mensaje de alerta
+    setTimeout(() => {
+        alert('🎉 ¡FELICIDADES! 🎉\n\n¡Se terminó el tiempo de espera!\nLuna Net ya está disponible.');
+    }, 1000);
+}
+
+function createConfetti() {
+    const confetti = document.createElement('div');
+    confetti.style.cssText = `
+        position: fixed;
+        width: 10px;
+        height: 10px;
+        background: ${['#ff6b6b', '#4ecdc4', '#45b7d1', '#f9ca24', '#f0932b'][Math.floor(Math.random() * 5)]};
+        left: ${Math.random() * 100}vw;
+        top: -10px;
+        z-index: 1000;
+        border-radius: 50%;
+        pointer-events: none;
+        animation: confetti-fall 3s linear forwards;
+    `;
+    
+    document.body.appendChild(confetti);
+    
+    setTimeout(() => confetti.remove(), 3000);
+}
+
+// CSS para la animación de confetis
+const style = document.createElement('style');
+style.textContent = `
+@keyframes confetti-fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+`;
+document.head.appendChild(style);
 
         /*
         ===================================================================
