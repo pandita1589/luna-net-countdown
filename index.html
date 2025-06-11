@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>monn Studios - Luna Net</title>
+    <title>Moon Studios - Luna Net</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;600;700&family=Audiowide&family=Iceberg&display=swap"
         rel="stylesheet">
@@ -68,13 +68,10 @@
         }
 
         @keyframes twinkle {
-
-            0%,
-            100% {
+            0%, 100% {
                 opacity: 0.4;
                 transform: scale(1);
             }
-
             50% {
                 opacity: 1;
                 transform: scale(1.2);
@@ -96,15 +93,8 @@
                 transform: translateX(-200px) translateY(200px);
                 opacity: 0;
             }
-
-            10% {
-                opacity: 1;
-            }
-
-            90% {
-                opacity: 1;
-            }
-
+            10% { opacity: 1; }
+            90% { opacity: 1; }
             100% {
                 transform: translateX(calc(100vw + 200px)) translateY(-200px);
                 opacity: 0;
@@ -129,7 +119,6 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -140,7 +129,7 @@
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #ffffff 0%, #cccccc 50%, #888888 100%);
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -151,6 +140,7 @@
             position: relative;
             cursor: pointer;
             transition: all 0.3s ease;
+            overflow: hidden;
         }
 
         .logo:hover {
@@ -168,33 +158,22 @@
             animation: logo-ring 8s linear infinite;
         }
 
+        .logo-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="moonGrad" cx="30%" cy="30%"><stop offset="0%" style="stop-color:%23ffffff;stop-opacity:1" /><stop offset="100%" style="stop-color:%23cccccc;stop-opacity:1" /></radialGradient></defs><circle cx="50" cy="50" r="45" fill="url(%23moonGrad)"/><circle cx="35" cy="35" r="8" fill="%23999999" opacity="0.6"/><circle cx="60" cy="25" r="5" fill="%23999999" opacity="0.4"/><circle cx="45" cy="65" r="6" fill="%23999999" opacity="0.5"/><circle cx="70" cy="55" r="4" fill="%23999999" opacity="0.3"/></svg>') center/cover;
+            object-fit: cover;
+        }
+
         @keyframes logo-pulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
 
         @keyframes logo-ring {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        .logo-text {
-            font-family: 'Audiowide', cursive;
-            font-size: 24px;
-            font-weight: 400;
-            color: #000000;
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         .main-title {
@@ -218,14 +197,11 @@
         }
 
         @keyframes title-glow {
-
-            0%,
-            100% {
+            0%, 100% { 
                 text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
                 filter: brightness(1);
             }
-
-            50% {
+            50% { 
                 text-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
                 filter: brightness(1.1);
             }
@@ -281,17 +257,9 @@
         }
 
         @keyframes shimmer {
-            0% {
-                left: -100%;
-            }
-
-            50% {
-                left: 100%;
-            }
-
-            100% {
-                left: 100%;
-            }
+            0% { left: -100%; }
+            50% { left: 100%; }
+            100% { left: 100%; }
         }
 
         .time-number {
@@ -310,17 +278,9 @@
         }
 
         @keyframes number-flip {
-            0% {
-                transform: rotateY(0deg) scale(1);
-            }
-
-            50% {
-                transform: rotateY(90deg) scale(1.1);
-            }
-
-            100% {
-                transform: rotateY(0deg) scale(1);
-            }
+            0% { transform: rotateY(0deg) scale(1); }
+            50% { transform: rotateY(90deg) scale(1.1); }
+            100% { transform: rotateY(0deg) scale(1); }
         }
 
         .time-label {
@@ -332,7 +292,6 @@
             letter-spacing: 1px;
         }
 
-        /* Botón de configuración público */
         .config-button-public {
             position: fixed;
             top: 30px;
@@ -359,7 +318,6 @@
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
         }
 
-        /* Sistema de Login */
         .login-overlay {
             position: fixed;
             top: 0;
@@ -386,15 +344,8 @@
         }
 
         @keyframes login-appear {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
         }
 
         .login-title {
@@ -450,7 +401,6 @@
             margin-top: 10px;
         }
 
-        /* Panel de Configuración */
         .config-panel {
             position: fixed;
             top: 20px;
@@ -473,15 +423,8 @@
         }
 
         @keyframes config-appear {
-            from {
-                opacity: 0;
-                transform: translateX(100%);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            from { opacity: 0; transform: translateX(100%); }
+            to { opacity: 1; transform: translateX(0); }
         }
 
         .config-panel.collapsed {
@@ -512,8 +455,7 @@
             margin-bottom: 15px;
         }
 
-        .config-input,
-        .config-button {
+        .config-input, .config-button {
             width: 100%;
             padding: 8px;
             border: 1px solid rgba(255, 255, 255, 0.3);
@@ -555,7 +497,6 @@
             border-color: rgba(255, 100, 100, 0.5);
         }
 
-        /* Efectos dinámicos */
         .ripple {
             position: absolute;
             border-radius: 50%;
@@ -565,14 +506,13 @@
         }
 
         @keyframes ripple-effect {
-            0% {
-                transform: scale(0);
-                opacity: 1;
-            }
+            0% { transform: scale(0); opacity: 1; }
+            100% { transform: scale(4); opacity: 0; }
+        }
 
-            100% {
-                transform: scale(4);
-                opacity: 0;
+        @keyframes confetti-fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
             }
         }
 
@@ -581,15 +521,12 @@
                 font-size: 2.5rem;
                 letter-spacing: 2px;
             }
-
             .time-number {
                 font-size: 2.5rem;
             }
-
             .countdown {
                 gap: 15px;
             }
-
             .config-button-public {
                 width: 45px;
                 height: 45px;
@@ -604,46 +541,42 @@
         <div class="stars" id="stars"></div>
     </div>
 
-    <!-- Botón público de configuración - SIMPLIFICADO -->
     <button class="config-button-public" id="configBtn" title="Configuración">⚙️</button>
 
-    <!-- Sistema de Login -->
     <div class="login-overlay" id="loginOverlay">
         <div class="login-box">
             <div class="login-title">ACCESO RESTRINGIDO</div>
             <input type="text" class="login-input" id="username" placeholder="Usuario" autocomplete="username">
-            <input type="password" class="login-input" id="password" placeholder="Contraseña"
-                autocomplete="current-password">
+            <input type="password" class="login-input" id="password" placeholder="Contraseña" autocomplete="current-password">
             <button class="login-button" id="loginBtn" onclick="attemptLogin()">ACCEDER</button>
             <div class="error-message" id="errorMessage"></div>
             <div class="blocked-message" id="blockedMessage"></div>
         </div>
     </div>
 
-    <!-- Panel de Configuración -->
     <div class="config-panel" id="configPanel">
         <div class="config-toggle" onclick="toggleConfig()">⚙️</div>
         <div class="config-title">CONFIGURACIÓN AVANZADA</div>
-
+        
         <div class="quick-buttons">
             <button class="quick-btn" onclick="setQuickDate(1, 'days')">1 Día</button>
             <button class="quick-btn" onclick="setQuickDate(7, 'days')">1 Semana</button>
             <button class="quick-btn" onclick="setQuickDate(1, 'months')">1 Mes</button>
             <button class="quick-btn" onclick="setQuickDate(3, 'months')">3 Meses</button>
         </div>
-
+        
         <div class="config-group">
             <input type="datetime-local" class="config-input" id="targetDateTime">
         </div>
-
+        
         <div class="config-group">
             <button class="config-button" onclick="updateCountdown()">Actualizar Cuenta</button>
         </div>
-
+        
         <div class="config-group">
             <button class="config-button" onclick="resetToDefault()">Restablecer</button>
         </div>
-
+        
         <div class="config-group">
             <button class="config-button logout-btn" onclick="logout()">Cerrar Sesión</button>
         </div>
@@ -651,15 +584,15 @@
 
     <div class="container">
         <div class="logo">
-            <span class="logo-text">MS</span>
+            <div class="logo-image"></div>
         </div>
-
-        <h1 class="main-title">monn Studios</h1>
-
+        
+        <h1 class="main-title">Moon Studios</h1>
+        
         <p class="subtitle">
             INICIANDO CUENTA REGRESIVA PARA LANZAMIENTO DE LUNA NET
         </p>
-
+        
         <div class="countdown" id="countdown">
             <div class="time-unit">
                 <span class="time-number" id="days">29</span>
@@ -681,10 +614,6 @@
     </div>
 
     <script>
-        // ==============================================
-        // VARIABLES GLOBALES Y CONFIGURACIÓN MONGODB
-        // ==============================================
-
         let targetDate = null;
         let isAuthenticated = false;
         let failedAttempts = 0;
@@ -697,36 +626,23 @@
             password: 'andre1589'
         };
 
-        // 🔗 CONFIGURACIÓN MONGODB - COMPLETAMENTE AUTOMÁTICA
         const MONGODB_CONFIG = {
-            // 👇 SOLO PEGA TU CONNECTION STRING AQUÍ Y LISTO
-            connectionString: "mongodb+srv://fabian1234andre:GWOLQUQqWRu2MPZ9@cluster0.ttvffqo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", // mongodb+srv://usuario:password@cluster0.xxxxx.mongodb.net/...
-
-            // URLs automáticas - detecta local vs producción
+            connectionString: "mongodb+srv://fabian1234andre:GWOLQUQqWRu2MPZ9@cluster0.ttvffqo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
             get apiUrl() {
                 const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-                return isLocal ? 'http://localhost:3000/api' : 'https://tu-backend.railway.app/api';
+                return isLocal ? 'http://localhost:3000/api' : 'https://monn-studios-backend.onrender.com/api';
             },
-
-            // Se activa automáticamente cuando hay connection string
             get enabled() {
                 return this.connectionString && this.connectionString.trim() !== "";
             },
-
-            // Auto-detecta si somos administrador o visitante
             get isAdmin() {
-                return isAuthenticated; // Solo cuando el admin está logueado
+                return isAuthenticated;
             }
         };
-
-        // ==============================================
-        // FUNCIONES DE MONGODB - COMPLETAMENTE AUTOMÁTICAS
-        // ==============================================
 
         async function mongoSaveConfig(targetDate) {
             try {
                 console.log('☁️ GUARDANDO CONFIGURACIÓN GLOBAL...');
-                console.log('👤 Solo el administrador puede hacer esto');
 
                 const configDoc = {
                     _id: "global_countdown_config",
@@ -742,10 +658,10 @@
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Accept': 'application/json'
+                        'Accept': 'application/json',
+                        'Access-Control-Allow-Origin': '*'
                     },
-                    body: JSON.stringify(configDoc),
-                    timeout: 8000
+                    body: JSON.stringify(configDoc)
                 });
 
                 if (!response.ok) {
@@ -757,7 +673,7 @@
                 if (result.success) {
                     console.log('✅ ¡CONFIGURACIÓN GLOBAL GUARDADA!');
                     console.log('🌍 TODOS los visitantes verán esta fecha ahora');
-                    saveLocalConfig(targetDate); // Backup local
+                    saveLocalConfig(targetDate);
                     return { success: true, source: 'mongodb', global: true };
                 } else {
                     throw new Error(result.error || 'Error desconocido');
@@ -776,8 +692,10 @@
 
                 const response = await fetch(`${MONGODB_CONFIG.apiUrl}/config`, {
                     method: 'GET',
-                    headers: { 'Accept': 'application/json' },
-                    timeout: 5000
+                    headers: { 
+                        'Accept': 'application/json',
+                        'Access-Control-Allow-Origin': '*'
+                    }
                 });
 
                 if (!response.ok) {
@@ -793,7 +711,7 @@
                     console.log(`🎯 Fecha configurada por el admin: ${targetDate.toLocaleString()}`);
                     console.log('👥 Esta fecha es para TODOS los visitantes');
 
-                    saveLocalConfig(targetDate); // Backup local
+                    saveLocalConfig(targetDate);
                     return { success: true, source: 'mongodb', global: true, data: result.data };
                 } else {
                     throw new Error('No hay configuración global');
@@ -806,7 +724,6 @@
             }
         }
 
-        // Auto-detecta si debe usar MongoDB o localStorage
         async function autoLoadConfig() {
             if (MONGODB_CONFIG.enabled) {
                 console.log('🚀 MODO AUTOMÁTICO: Intentando cargar configuración global...');
@@ -825,7 +742,6 @@
             }
         }
 
-        // Auto-detecta si debe guardar en MongoDB o localStorage
         async function autoSaveConfig(targetDate) {
             if (MONGODB_CONFIG.enabled && MONGODB_CONFIG.isAdmin) {
                 console.log('🔐 ADMINISTRADOR DETECTADO - Guardando GLOBALMENTE...');
@@ -840,17 +756,12 @@
                 }
             } else if (MONGODB_CONFIG.enabled && !MONGODB_CONFIG.isAdmin) {
                 console.log('👀 Visitante: No puede modificar configuración global');
-                // Los visitantes no pueden guardar, solo cargan
                 return { success: false, reason: 'visitor' };
             } else {
                 console.log('💻 Modo local - guardando en localStorage');
                 return saveLocalConfig(targetDate);
             }
         }
-
-        // ==============================================
-        // FUNCIONES LOCALES (BACKUP)
-        // ==============================================
 
         function saveLocalConfig(date) {
             try {
@@ -861,21 +772,21 @@
                     source: 'localStorage'
                 };
 
-                localStorage.setItem('monn_studios_config', JSON.stringify(config));
+                localStorage.setItem('moon_studios_config', JSON.stringify(config));
                 targetDate = date;
 
                 console.log('💾 Configuración guardada en localStorage');
                 return { success: true, source: 'localStorage' };
             } catch (e) {
                 console.error('❌ Error guardando en localStorage:', e);
-                targetDate = date; // Al menos mantener en sesión
+                targetDate = date;
                 return { success: false, error: e.message };
             }
         }
 
         function loadLocalConfig() {
             try {
-                const savedConfig = localStorage.getItem('monn_studios_config');
+                const savedConfig = localStorage.getItem('moon_studios_config');
 
                 if (savedConfig) {
                     const config = JSON.parse(savedConfig);
@@ -893,69 +804,6 @@
                 return { success: false, error: e.message };
             }
         }
-
-        // ==============================================
-        // FUNCIONES BÁSICAS (SIN DEPENDENCIAS)
-        // ==============================================
-
-        function getBrowserFingerprint() {
-            try {
-                return btoa(navigator.userAgent.slice(0, 20) + screen.width).slice(0, 16);
-            } catch (e) {
-                return 'default_browser';
-            }
-        }
-
-        function clearLoginFields() {
-            const elements = {
-                username: document.getElementById('username'),
-                password: document.getElementById('password'),
-                error: document.getElementById('errorMessage'),
-                blocked: document.getElementById('blockedMessage'),
-                loginBtn: document.getElementById('loginBtn')
-            };
-
-            if (elements.username) elements.username.value = '';
-            if (elements.password) elements.password.value = '';
-            if (elements.error) elements.error.textContent = '';
-            if (elements.blocked) elements.blocked.textContent = '';
-            if (elements.loginBtn) {
-                elements.loginBtn.disabled = false;
-                elements.loginBtn.textContent = 'ACCEDER';
-            }
-        }
-
-        function showBlockedMessage(minutes) {
-            console.log('⚠️ Usuario bloqueado por', minutes, 'minutos');
-
-            const elements = {
-                blocked: document.getElementById('blockedMessage'),
-                loginBtn: document.getElementById('loginBtn'),
-                overlay: document.getElementById('loginOverlay'),
-                error: document.getElementById('errorMessage')
-            };
-
-            if (elements.blocked) {
-                if (minutes >= 60) {
-                    const hours = Math.floor(minutes / 60);
-                    elements.blocked.textContent = `🔒 Bloqueado por ${hours} hora(s). Demasiados intentos fallidos.`;
-                } else {
-                    elements.blocked.textContent = `🔒 Bloqueado por ${minutes} minuto(s). Demasiados intentos fallidos.`;
-                }
-            }
-
-            if (elements.loginBtn) {
-                elements.loginBtn.disabled = true;
-                elements.loginBtn.textContent = 'BLOQUEADO';
-            }
-
-            if (elements.error) elements.error.textContent = '';
-            if (elements.overlay) elements.overlay.style.display = 'flex';
-        }
-
-        // ==============================================
-        // FUNCIONES DE AUTENTICACIÓN SIMPLIFICADAS
-        // ==============================================
 
         function openConfigSystem() {
             console.log('🔧 BOTÓN CLICKEADO!');
@@ -979,7 +827,6 @@
                 return;
             }
 
-            // Limpiar campos
             const username = document.getElementById('username');
             const password = document.getElementById('password');
             const errorMsg = document.getElementById('errorMessage');
@@ -990,11 +837,9 @@
             if (errorMsg) errorMsg.textContent = '';
             if (blockedMsg) blockedMsg.textContent = '';
 
-            // Mostrar login
             loginOverlay.style.display = 'flex';
             console.log('✅ Login mostrado exitosamente');
 
-            // Focus en username
             setTimeout(() => {
                 if (username) username.focus();
             }, 100);
@@ -1013,7 +858,6 @@
             configPanel.classList.remove('collapsed');
             console.log('✅ Panel mostrado exitosamente');
 
-            // Auto-colapsar después de unos segundos
             setTimeout(() => {
                 configPanel.classList.add('collapsed');
             }, 3000);
@@ -1040,20 +884,15 @@
             if (user === CREDENTIALS.username && pass === CREDENTIALS.password) {
                 console.log('✅ ¡LOGIN EXITOSO!');
 
-                // Marcar como autenticado
                 isAuthenticated = true;
 
-                // Cerrar login
                 const loginOverlay = document.getElementById('loginOverlay');
                 if (loginOverlay) {
                     loginOverlay.style.display = 'none';
                     console.log('🚪 Login cerrado');
                 }
 
-                // Mostrar panel de configuración
                 showConfigPanel();
-
-                // Cargar configuración
                 loadConfiguration();
 
             } else {
@@ -1062,7 +901,6 @@
                     errorMsg.textContent = '❌ Usuario o contraseña incorrectos';
                 }
 
-                // Limpiar campos
                 username.value = '';
                 password.value = '';
             }
@@ -1073,7 +911,6 @@
 
             isAuthenticated = false;
 
-            // Ocultar todo
             const loginOverlay = document.getElementById('loginOverlay');
             const configPanel = document.getElementById('configPanel');
 
@@ -1098,10 +935,6 @@
             }
         }
 
-        // ==============================================
-        // FUNCIONES DE CONFIGURACIÓN GLOBAL
-        // ==============================================
-
         function setQuickDate(amount, unit) {
             console.log(`⏰ Configurando fecha rápida: ${amount} ${unit}`);
 
@@ -1114,7 +947,6 @@
                 target.setMonth(target.getMonth() + amount);
             }
 
-            // Guardar globalmente para todos los usuarios
             saveGlobalConfiguration(target);
 
             const dateTimeString = target.toISOString().slice(0, 16);
@@ -1132,7 +964,6 @@
             const now = new Date();
             const defaultTarget = new Date(now.getTime() + (29 * 24 * 60 * 60 * 1000) + (23 * 60 * 60 * 1000) + (59 * 60 * 1000) + (44 * 1000));
 
-            // Guardar globalmente para todos los usuarios
             saveGlobalConfiguration(defaultTarget);
 
             const dateTimeString = defaultTarget.toISOString().slice(0, 16);
@@ -1151,7 +982,6 @@
             if (dateTimeInput && dateTimeInput.value) {
                 const newTarget = new Date(dateTimeInput.value);
 
-                // Guardar globalmente para todos los usuarios
                 saveGlobalConfiguration(newTarget);
 
                 console.log(`✅ Nueva fecha guardada globalmente: ${newTarget.toLocaleString()}`);
@@ -1160,7 +990,6 @@
         }
 
         function saveGlobalConfiguration(date) {
-            // 🚀 COMPLETAMENTE AUTOMÁTICO
             console.log('🔄 Iniciando guardado automático...');
 
             autoSaveConfig(date).then(result => {
@@ -1174,7 +1003,6 @@
                     }
                 } else if (result.reason === 'visitor') {
                     console.log('👀 Los visitantes no pueden modificar la configuración');
-                    // No mostrar nada - los visitantes solo ven
                 } else {
                     console.log('📝 Guardado en localStorage como fallback');
                     alert('📝 Configuración guardada como respaldo local.');
@@ -1201,7 +1029,6 @@
                     console.log('💻 Configuración local cargada');
                 }
 
-                // Actualizar input solo si somos admin autenticado
                 if (isAuthenticated) {
                     const dateTimeInput = document.getElementById('targetDateTime');
                     if (dateTimeInput && targetDate) {
@@ -1216,7 +1043,6 @@
         }
 
         async function loadConfiguration() {
-            // 🚀 COMPLETAMENTE AUTOMÁTICO
             const hasConfig = await loadGlobalConfiguration();
 
             if (!hasConfig) {
@@ -1224,7 +1050,6 @@
                 const now = new Date();
                 const defaultTarget = new Date(now.getTime() + (29 * 24 * 60 * 60 * 1000) + (23 * 60 * 60 * 1000) + (59 * 60 * 1000) + (44 * 1000));
 
-                // Solo guardar si somos administrador autenticado
                 if (isAuthenticated) {
                     console.log('👤 Administrador - guardando configuración por defecto globalmente');
                     saveGlobalConfiguration(defaultTarget);
@@ -1256,6 +1081,11 @@
                     const element = document.getElementById(id);
                     if (element) element.textContent = '00';
                 });
+
+                if (!window.celebrationShown) {
+                    showCelebration();
+                    window.celebrationShown = true;
+                }
             }
         }
 
@@ -1270,9 +1100,38 @@
             }
         }
 
-        // ==============================================
-        // FUNCIONES DE ANIMACIÓN
-        // ==============================================
+        function showCelebration() {
+            document.querySelector('.main-title').textContent = '¡LUNA NET YA DISPONIBLE!';
+            document.querySelector('.subtitle').textContent = '🎉 ¡Se terminó el tiempo de espera! 🎉';
+            
+            for (let i = 0; i < 100; i++) {
+                createConfetti();
+            }
+            
+            setTimeout(() => {
+                alert('🎉 ¡FELICIDADES! 🎉\n\n¡Se terminó el tiempo de espera!\nLuna Net ya está disponible.');
+            }, 1000);
+        }
+
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.style.cssText = `
+                position: fixed;
+                width: 10px;
+                height: 10px;
+                background: ${['#ff6b6b', '#4ecdc4', '#45b7d1', '#f9ca24', '#f0932b'][Math.floor(Math.random() * 5)]};
+                left: ${Math.random() * 100}vw;
+                top: -10px;
+                z-index: 1000;
+                border-radius: 50%;
+                pointer-events: none;
+                animation: confetti-fall 3s linear forwards;
+            `;
+            
+            document.body.appendChild(confetti);
+            
+            setTimeout(() => confetti.remove(), 3000);
+        }
 
         function createStarField() {
             const starsContainer = document.getElementById('stars');
@@ -1360,10 +1219,6 @@
             }, 800);
         }
 
-        // ==============================================
-        // EVENT LISTENERS Y INICIALIZACIÓN
-        // ==============================================
-
         document.addEventListener('mousemove', (e) => {
             const now = Date.now();
             if (now - lastMouseUpdate > 32) {
@@ -1374,10 +1229,9 @@
         });
 
         document.addEventListener('DOMContentLoaded', async function () {
-            console.log('🚀 Iniciando monn Studios - Luna Net...');
+            console.log('🚀 Iniciando Moon Studios - Luna Net...');
 
             try {
-                // 1. CONFIGURAR BOTÓN DE CONFIGURACIÓN PRIMERO
                 const configBtn = document.getElementById('configBtn');
                 if (configBtn) {
                     console.log('🔧 Configurando botón de configuración...');
@@ -1394,7 +1248,6 @@
                     console.error('❌ Botón de configuración NO encontrado');
                 }
 
-                // 2. Verificar elementos críticos
                 const loginOverlay = document.getElementById('loginOverlay');
                 const configPanel = document.getElementById('configPanel');
 
@@ -1402,26 +1255,21 @@
                 console.log('- Login overlay:', !!loginOverlay);
                 console.log('- Config panel:', !!configPanel);
 
-                // 3. CARGAR CONFIGURACIÓN GLOBAL
                 console.log('📥 Iniciando carga de configuración global...');
-                await loadConfiguration(); // Ahora sí usamos await porque loadConfiguration es async
+                await loadConfiguration();
 
-                // 4. Crear estrellas
                 createStarField();
                 console.log('✨ Estrellas creadas');
 
-                // 5. Iniciar contador con la configuración cargada
                 updateCountdownDisplay();
                 setInterval(updateCountdownDisplay, 1000);
                 console.log('⏰ Contador iniciado con configuración global');
 
-                // 6. Animaciones
                 if (navigator.hardwareConcurrency >= 2) {
                     animateStarsWithMouse();
                     console.log('🎨 Animaciones activadas');
                 }
 
-                // 7. Event listeners básicos
                 document.addEventListener('keypress', function (e) {
                     if (e.key === 'Enter') {
                         const loginOverlay = document.getElementById('loginOverlay');
@@ -1437,7 +1285,6 @@
                     }
                 });
 
-                // 8. Cerrar login al hacer clic fuera
                 document.addEventListener('click', function (e) {
                     const loginOverlay = document.getElementById('loginOverlay');
                     const loginBox = document.querySelector('.login-box');
@@ -1448,7 +1295,6 @@
                     }
                 });
 
-                // 9. Ripples
                 const interactiveElements = document.querySelectorAll('.time-unit, #configBtn, .logo');
                 interactiveElements.forEach(element => {
                     element.addEventListener('click', function (e) {
@@ -1456,7 +1302,6 @@
                     });
                 });
 
-                // 10. Fecha listener
                 const dateTimeInput = document.getElementById('targetDateTime');
                 if (dateTimeInput) {
                     dateTimeInput.addEventListener('change', updateCountdown);
@@ -1466,25 +1311,21 @@
                 console.log('🔑 Credenciales: AndreSM / andre1589');
                 console.log('🎯 Haz clic en ⚙️ para probar');
 
-                // 11. Test automático del botón y verificación de configuración
                 setTimeout(() => {
                     console.log('🧪 TESTING FINAL - Verificando sistema...');
                     console.log('='.repeat(50));
 
-                    // Test función
                     if (typeof openConfigSystem === 'function') {
                         console.log('✅ Función openConfigSystem disponible');
                     } else {
                         console.error('❌ Función openConfigSystem NO disponible');
                     }
 
-                    // Test configuración automática
                     if (targetDate) {
                         console.log('✅ SISTEMA AUTOMÁTICO FUNCIONANDO:');
                         console.log(`🎯 Fecha objetivo: ${targetDate.toLocaleString()}`);
                         console.log(`📊 Días restantes: ${Math.floor((targetDate - new Date()) / (1000 * 60 * 60 * 24))}`);
 
-                        // Detectar modo automáticamente
                         if (MONGODB_CONFIG.enabled) {
                             console.log('🌍 MODO GLOBAL AUTOMÁTICO ACTIVO');
                             console.log('👤 Administrador: Puede configurar para TODOS');
@@ -1496,7 +1337,6 @@
                             console.log('💡 Para modo global: pega tu connection string de MongoDB');
                         }
 
-                        // Estado actual del usuario
                         if (isAuthenticated) {
                             console.log('🔐 ADMINISTRADOR AUTENTICADO');
                             console.log('⚙️ Puedes configurar la fecha para todos los visitantes');
@@ -1518,7 +1358,6 @@
             }
         });
 
-        // Hacer funciones disponibles globalmente
         window.openConfigSystem = openConfigSystem;
         window.attemptLogin = attemptLogin;
         window.toggleConfig = toggleConfig;
@@ -1527,59 +1366,7 @@
         window.resetToDefault = resetToDefault;
         window.updateCountdown = updateCountdown;
 
-        console.log('🌍 Sistema completamente funcional!');
-
-        /*
-        ===================================================================
-        🚀 SISTEMA COMPLETAMENTE AUTOMÁTICO - MONGODB
-        ===================================================================
-        
-        ¡YA NO NECESITAS CONFIGURAR NADA MANUALMENTE!
-        
-        🎯 CÓMO FUNCIONA AUTOMÁTICAMENTE:
-        
-        1️⃣ VISITANTES (SIN LOGIN):
-           ✅ Entran a tu web
-           ✅ Ven automáticamente la fecha que TÚ configuraste
-           ✅ Se carga desde MongoDB automáticamente si está disponible
-           ✅ Si MongoDB no está, usa localStorage como respaldo
-           ✅ Sin login requerido - solo ven el countdown
-        
-        2️⃣ TÚ (ADMINISTRADOR):
-           ✅ Haces clic en ⚙️
-           ✅ Login: AndreSM / andre1589  
-           ✅ Cambias la fecha
-           ✅ Al guardar → AUTOMÁTICAMENTE se sincroniza en MongoDB
-           ✅ TODOS los visitantes ven tu nueva configuración
-        
-        3️⃣ DETECCIÓN AUTOMÁTICA:
-           ✅ Si pones connection string → Modo global automático
-           ✅ Si no hay connection string → Modo local
-           ✅ Administrador logueado → Puede configurar globalmente
-           ✅ Visitantes → Solo ven, no pueden cambiar
-        
-        📋 PARA ACTIVAR MODO GLOBAL:
-        
-        1. Ve a: https://cloud.mongodb.com
-        2. Crea cuenta gratis + cluster gratis
-        3. Obtén tu connection string
-        4. Pégalo arriba en connectionString: ""
-        5. ¡LISTO! MongoDB se activa automáticamente
-        
-        ✨ BENEFICIOS DEL SISTEMA AUTOMÁTICO:
-        ✅ Sin configuración manual
-        ✅ Detección automática de administrador vs visitante  
-        ✅ Fallback automático si MongoDB falla
-        ✅ Logs claros de lo que está pasando
-        ✅ Alertas informativas para el administrador
-        ✅ Los visitantes nunca ven errores
-        
-        🎮 PARA PROBAR:
-        1. Modo local: Funciona YA (sin MongoDB)
-        2. Modo global: Pega connection string y ¡automático!
-        
-        ===================================================================
-        */
+        console.log('🌍 Moon Studios - Sistema completamente funcional!');
     </script>
 </body>
 
