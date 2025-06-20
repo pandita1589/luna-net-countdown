@@ -840,7 +840,6 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
 
         console.log('✅ SISTEMA COMPLETAMENTE FUNCIONAL!');
-        console.log('🔑 Credenciales: AndreSM / andre1589');
         console.log('🎯 Haz clic en ⚙️ para probar');
 
         setTimeout(() => {
