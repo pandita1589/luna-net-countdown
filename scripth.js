@@ -882,7 +882,6 @@ document.addEventListener('DOMContentLoaded', async function () {
 
             console.log('='.repeat(50));
             console.log('🎯 Botón listo - HAZ CLIC EN ⚙️ PARA CONFIGURAR');
-            console.log('🔑 Credenciales: AndreSM / andre1589');
         }, 2000);
 
     } catch (error) {
